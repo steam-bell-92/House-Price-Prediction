@@ -18,7 +18,8 @@ A simple, interactive machine learning project that predicts house prices using 
 |-------|------------------------------|-------------------|-----------------|
 | Analyzed patterns using seaborn & matplotlib | Removed outliers (IQR) & added new features | Combines Lasso & Ridge | Input → Predict in browser |
 
-<a href='https://steam-bell-92.github.io/House-Price-Prediction/Housing_front.html'>WEBSITE</a>
+## 🌐 Live Website
+Try predicting prices of various houses: <a href='https://steam-bell-92.github.io/House-Price-Prediction/Housing_front.html'>WEBSITE</a>
 
 ## 🧰 Tech Stack
 
