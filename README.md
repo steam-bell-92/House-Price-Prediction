@@ -4,12 +4,13 @@ A simple, interactive machine learning project that predicts house prices using 
 
 ## 📌 Project Highlights
 
-- Built using **Python (scikit-learn)** and essential data libraries
-- Performed **EDA, feature engineering**, and **IQR-based outlier removal**
-- Model trained using **ElasticNet Regression**
-- Validated using **10×10 Repeated K-Fold Cross Validation**
-- Achieved **R² ≈ 0.57**, ~0.54 after cross-validation
-- Frontend built with **HTML, CSS, and JavaScript**
+- Built using **`Python` (`scikit-learn`)** and essential data libraries
+- Performed **EDA, feature engineering**, and **`IQR-based outlier removal`**
+- Model trained using **`ElasticNet` `Regression`**
+- Validated using **10×10 `Repeated K-Fold Cross Validation`**
+- Achieved **R² ≈ 0.57** initially.
+- Achieved **R² ≈ 0.54** after cross validation.
+- Website built with **`HTML`, `CSS`, and `JavaScript`**
 - **Static website** provides instant predictions from model equation
 
 ## 🔍 Features
@@ -20,16 +21,16 @@ A simple, interactive machine learning project that predicts house prices using 
 
 ## 🌐 Live Website
 Try predicting prices of various houses: <a href='https://steam-bell-92.github.io/House-Price-Prediction/Housing_front.html'>WEBSITE</a><br>
-***Caution***: dataset from 2022-23
+> ***Caution***: dataset from 2022-23
 
 ## 🧰 Tech Stack
 
-- **Python** – core language for ML
-- **pandas**, **numpy** – data handling
-- **seaborn**, **matplotlib** – visualization
-- **scikit-learn** – model training and validation
-- **HTML/CSS** – frontend structure and styling of website
-- **JavaScript** – interactive logic for predictions
+- **`Python`** – core language for ML
+- **`pandas`**, **`numpy`** – data handling
+- **`seaborn`**, **`matplotlib`** – visualization
+- **`scikit-learn`** – model training and validation
+- **`HTML/CSS`** – frontend structure and styling of website
+- **`JavaScript`** – interactive logic for predictions
 
 ## 📁 Project Structure
 
