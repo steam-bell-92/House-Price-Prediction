@@ -9,7 +9,7 @@ A simple, interactive machine learning project that predicts house prices using 
 - Model trained using **`ElasticNet` `Regression`**
 - Validated using **10×10 `Repeated K-Fold Cross Validation`**
 - Achieved **`R² ≈ 0.57`** initially.
-- Achieved **`R² ≈ 0.54`** after cross validation.
+- Achieved **`R² ≈ 0.54`** after cross validation (10 folds).
 - Website built with **`HTML`, `CSS`, and `JavaScript`**
 - **Static website** provides instant predictions from model equation
 
