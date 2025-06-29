@@ -35,25 +35,16 @@ Try predicting prices of various houses: <a href='https://steam-bell-92.github.i
 ## 📁 Project Structure
 
 ```
-house-price-predictor/
-│
-├── index.html                   🔹 Landing/intro page (was: Housing_front.html)
-├── predictor.html               🔹 Prediction interface (was: Housing.html)
-│
-├── style/
-│   └── main.css                 🔹 Combined CSS file (from Housing_front_style.css & Housing_style.css)
-│
-├── script/
-│   └── model.js                 🔹 JS model logic (was: Housing_script.js)
-│
-├── assets/
-│   ├── house_price_banner.jpg   🔹 Project image (was: Houses_prices_pic.jpg)                    
-│   └── Housing.csv              🔹 Project Dataset (from: kaggle)    
-|
-├── notebook/
-│   └── house_price_model.ipynb  🔹 Model training notebook (was: Housing.ipynb)
-│
-└── README.md                    🔹 Project documentation
+House-Price-Predicton/
+├── Housing_front.html                   🔹 Landing/intro page
+├── Housing.html                         🔹 Prediction interface
+├── Housing_style.css                    🔹CSS file 
+├── Housing_front_style.css              🔹CSS file
+├── Housing_script.js                    🔹 JS model logic (was: Housing_script.js)
+├── Houses_prices_pic.jpg                🔹 Project image (was: Houses_prices_pic.jpg) 
+├── Housing.csv                          🔹 Project Dataset (from: kaggle)    
+├── Housing.ipynb                        🔹 Model training notebook
+└── README.md                            🔹 This file !
 ```
 
 ## 👤 Author
