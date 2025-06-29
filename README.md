@@ -37,21 +37,21 @@ Try predicting prices of various houses: <a href='https://steam-bell-92.github.i
 ```
 house-price-predictor/
 │
-├── index.html                   # 🔹 Landing/intro page (was: Housing_front.html)
-├── predictor.html               # 🔹 Prediction interface (was: Housing.html)
+├── index.html                   🔹 Landing/intro page (was: Housing_front.html)
+├── predictor.html               🔹 Prediction interface (was: Housing.html)
 │
 ├── style/
-│   └── main.css                 # 🔹 Combined CSS file (from Housing_front_style.css & Housing_style.css)
+│   └── main.css                 🔹 Combined CSS file (from Housing_front_style.css & Housing_style.css)
 │
 ├── script/
-│   └── model.js                 # 🔹 JS model logic (was: Housing_script.js)
+│   └── model.js                 🔹 JS model logic (was: Housing_script.js)
 │
 ├── assets/
-│   ├── house_price_banner.jpg   # 🔹 Project image (was: Houses_prices_pic.jpg)                    
-│   └── Housing.csv              # 🔹 Project Dataset (from: kaggle)    
+│   ├── house_price_banner.jpg   🔹 Project image (was: Houses_prices_pic.jpg)                    
+│   └── Housing.csv              🔹 Project Dataset (from: kaggle)    
 |
 ├── notebook/
-│   └── house_price_model.ipynb  # 🔹 Model training notebook (was: Housing.ipynb)
+│   └── house_price_model.ipynb  🔹 Model training notebook (was: Housing.ipynb)
 │
 └── README.md                    # 🔹 Project documentation
 ```
