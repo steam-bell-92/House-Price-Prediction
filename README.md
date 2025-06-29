@@ -53,7 +53,7 @@ house-price-predictor/
 ├── notebook/
 │   └── house_price_model.ipynb  🔹 Model training notebook (was: Housing.ipynb)
 │
-└── README.md                    # 🔹 Project documentation
+└── README.md                    🔹 Project documentation
 ```
 
 ## 👤 Author
