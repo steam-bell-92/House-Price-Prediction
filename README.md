@@ -38,8 +38,8 @@ Try predicting prices of various houses: <a href='https://steam-bell-92.github.i
 House-Price-Predicton/
 ├── Housing_front.html                   🔹 Landing/intro page
 ├── Housing.html                         🔹 Prediction interface
-├── Housing_style.css                    🔹CSS file 
-├── Housing_front_style.css              🔹CSS file
+├── Housing_style.css                    🔹 CSS file 
+├── Housing_front_style.css              🔹 CSS file
 ├── Housing_script.js                    🔹 JS model logic (was: Housing_script.js)
 ├── Houses_prices_pic.jpg                🔹 Project image (was: Houses_prices_pic.jpg) 
 ├── Housing.csv                          🔹 Project Dataset (from: kaggle)    
