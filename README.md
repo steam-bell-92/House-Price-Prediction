@@ -14,6 +14,8 @@ A simple, interactive machine learning project that predicts house prices using 
 - Achieved **`R² ≈ 0.54`** after cross validation (10 folds).
 - Website built with **`HTML`, `CSS`, and `JavaScript`**
 - **Static website** provides instant predictions from model equation
+  <br><br>
+⭐ If you find this useful, consider giving it a star!
 
 ---
 
