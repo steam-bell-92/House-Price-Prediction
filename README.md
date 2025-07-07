@@ -2,6 +2,8 @@
 
 A simple, interactive machine learning project that predicts house prices using a multivariate linear regression model enhanced with ElasticNet regularization. The model is deployed on a static website where users can input values and receive real-time predictions based on the trained expression.
 
+⭐ If you find this useful, consider giving it a star!
+
 ---
 
 ## 📌 Project Highlights
