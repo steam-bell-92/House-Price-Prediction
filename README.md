@@ -39,7 +39,7 @@ Try predicting prices of various houses: <a href='https://steam-bell-92.github.i
 
 - **`Python`** – core language for ML
 - **`pandas`**, **`numpy`** – data handling
-- **`seaborn`**, **`matplotlib`** – visualization
+- **`seaborn`**, **`matplotlib`**, **`plotly`** – visualization
 - **`scikit-learn`** – model training and validation
 - **`HTML/CSS`** – frontend structure and styling of website
 - **`JavaScript`** – interactive logic for predictions
@@ -58,6 +58,7 @@ House-Price-Predicton/
 ├── Houses_prices_pic.jpg                🔹 Project image (was: Houses_prices_pic.jpg) 
 ├── Housing.csv                          🔹 Project Dataset (from: kaggle)    
 ├── Housing.ipynb                        🔹 Model training notebook
+├── Housing.py                           🔹 Python File
 └── README.md                            🔹 This file !
 ```
 ---
