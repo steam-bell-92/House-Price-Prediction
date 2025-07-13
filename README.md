@@ -65,3 +65,5 @@ House-Price-Predicton/
 
 ## 👤 Author
 Anuj Kulkarni - aka - steam-bell-92
+
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
