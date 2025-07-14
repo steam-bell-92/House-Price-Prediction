@@ -58,7 +58,7 @@ House-Price-Prediction/
 │   ├── housing.py                   🔹 Python File (same as ML Workflow)
 │   └── Housing.csv                  🔹 Dataset
 |
-Images/
+├── Images/
 │   ├── Houses_prices_pic.jpg        🔹 Background on Website
 │   └── Model.png                    🔹 Model Expression Plot
 |
