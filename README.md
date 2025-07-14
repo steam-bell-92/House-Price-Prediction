@@ -56,7 +56,8 @@ House-Price-Prediction/
 ├── Codes/
 │   ├── Housing.ipynb                🔹 ML Workflow
 │   ├── housing.py                   🔹 Python File (same as ML Workflow)
-│   └── Housing.csv                  🔹 Dataset
+│   ├── Housing.csv                  🔹 Dataset
+|   └── newplot.png                  🔹 Cell '34' Plot
 |
 ├── Images/
 │   ├── Houses_prices_pic.jpg        🔹 Background on Website
