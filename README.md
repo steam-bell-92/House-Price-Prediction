@@ -54,24 +54,24 @@ Try predicting prices of various houses: <a href='https://steam-bell-92.github.i
 House-Price-Prediction/
 |
 ├── Codes/
-│   ├── Housing.ipynb
-│   ├── housing.py
-│   └── Housing.csv
+│   ├── Housing.ipynb                🔹 ML Workflow
+│   ├── housing.py                   🔹 Python File (same as ML Workflow)
+│   └── Housing.csv                  🔹 Dataset
 |
 Images/
-│   ├── Houses_prices_pic.jpg
-│   └── Model.png
+│   ├── Houses_prices_pic.jpg        🔹 Background on Website
+│   └── Model.png                    🔹 Model Expression Plot
 |
 ├── Website/
-│   ├── Housing.html
-│   ├── Housing_front.html
-│   ├── Housing_style.css
-│   ├── Housing_front_style.css
-│   └── Housing_script.js
+│   ├── Housing.html                 🔹 Main Site where Prediction
+│   ├── Housing_front.html           🔹 Front Page of Website
+│   ├── Housing_style.css            🔹 Main Site Styling
+│   ├── Housing_front_style.css      🔹 Front Page Styling
+│   └── Housing_script.js            🔹 Logic of Prediction
 |
-├── README.md
-└── LICENSE
-
+├── README.md                        🔹 This File !!
+|
+└── LICENSE                          🔹 MIT License
 
 ```
 ---
