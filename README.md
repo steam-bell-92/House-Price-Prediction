@@ -19,6 +19,8 @@ A simple, interactive machine learning project that predicts house prices using 
   <br><br>
 ⭐ If you find this useful, consider giving it a star!
 
+<img src="https://github.com/steam-bell-92/House-Price-Prediction/blob/main/Model.png">
+
 ---
 
 ## 🔍 Features
@@ -59,6 +61,7 @@ House-Price-Predicton/
 ├── Housing.csv                          🔹 Project Dataset (from: kaggle)    
 ├── Housing.ipynb                        🔹 Model training notebook
 ├── Housing.py                           🔹 Python File
+├── Model.png                            🔹 Model Expression Plot
 └── README.md                            🔹 This file !
 ```
 ---
