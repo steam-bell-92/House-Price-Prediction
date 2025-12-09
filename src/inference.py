@@ -181,10 +181,16 @@ def get_model_info(model=None):
         'coefficients': {
             name: float(coef) 
             for name, coef in zip(config.FEATURE_COLUMNS, model.coef_)
-        },
-        'alpha': model.alpha,
-        'l1_ratio': model.l1_ratio
+        }
     }
+    
+    # Add model-specific parameters
+    if hasattr(model, 'alpha'):
+        info['alpha'] = model.alpha
+        info['l1_ratio'] = model.l1_ratio
+        info['model_type'] = 'ElasticNet'
+    else:
+        info['model_type'] = 'LinearRegression'
     
     return info
 
@@ -205,9 +211,11 @@ def main():
     # Get model info
     print("Model Information:")
     info = get_model_info(model)
+    print(f"  Model Type: {info['model_type']}")
     print(f"  Intercept: {info['intercept']:.4f}")
-    print(f"  Alpha: {info['alpha']}")
-    print(f"  L1 Ratio: {info['l1_ratio']}")
+    if 'alpha' in info:
+        print(f"  Alpha: {info['alpha']}")
+        print(f"  L1 Ratio: {info['l1_ratio']}")
     print("\n  Coefficients:")
     for feature, coef in info['coefficients'].items():
         print(f"    {feature:20s}: {coef:.4f}")

@@ -5,7 +5,7 @@ Loads data, trains ElasticNet model, evaluates performance, and saves artifacts.
 import numpy as np
 import joblib
 from sklearn.model_selection import train_test_split, cross_val_score, RepeatedKFold
-from sklearn.linear_model import ElasticNet
+from sklearn.linear_model import ElasticNet, LinearRegression
 from sklearn.metrics import r2_score, mean_squared_error
 import config
 import preprocessing
@@ -13,7 +13,8 @@ import preprocessing
 
 def train_model(X_train, y_train):
     """
-    Train an ElasticNet model with configured hyperparameters.
+    Train a model with configured hyperparameters.
+    Uses ElasticNet or LinearRegression based on config.MODEL_TYPE.
     
     Args:
         X_train: Training features
@@ -22,11 +23,15 @@ def train_model(X_train, y_train):
     Returns:
         Trained model
     """
-    model = ElasticNet(
-        alpha=config.ALPHA,
-        l1_ratio=config.L1_RATIO,
-        random_state=config.RANDOM_STATE
-    )
+    if config.MODEL_TYPE == 'linear':
+        model = LinearRegression()
+    else:  # elasticnet
+        model = ElasticNet(
+            alpha=config.ALPHA,
+            l1_ratio=config.L1_RATIO,
+            random_state=config.RANDOM_STATE
+        )
+    
     model.fit(X_train, y_train)
     return model
 
@@ -161,8 +166,11 @@ def main():
     print(f"Test set size: {len(X_test)}")
     
     # Step 3: Train model
-    print("\nStep 3: Training ElasticNet model...")
-    print(f"Hyperparameters: alpha={config.ALPHA}, l1_ratio={config.L1_RATIO}")
+    print("\nStep 3: Training model...")
+    if config.MODEL_TYPE == 'linear':
+        print(f"Model type: LinearRegression")
+    else:
+        print(f"Model type: ElasticNet (alpha={config.ALPHA}, l1_ratio={config.L1_RATIO})")
     model = train_model(X_train, y_train)
     print("Model training completed!")
     
@@ -192,7 +200,10 @@ def main():
     
     # Summary
     print("Summary:")
-    print(f"  Model: ElasticNet (alpha={config.ALPHA}, l1_ratio={config.L1_RATIO})")
+    if config.MODEL_TYPE == 'linear':
+        print(f"  Model: LinearRegression")
+    else:
+        print(f"  Model: ElasticNet (alpha={config.ALPHA}, l1_ratio={config.L1_RATIO})")
     print(f"  Test R² Score: {test_metrics['r2_score']:.4f}")
     print(f"  Test RMSE: {test_metrics['rmse']:.4f}")
     print(f"  Cross-Validation Avg R²: {cv_metrics['avg_r2']:.4f} ± {cv_metrics['std_r2']:.4f}")

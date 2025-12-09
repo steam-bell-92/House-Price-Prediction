@@ -8,8 +8,11 @@ import os
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # ============ Hyperparameters ============
-# ElasticNet hyperparameters
-ALPHA = 0.1  # Regularization strength
+# Model type: 'elasticnet' or 'linear'
+MODEL_TYPE = 'elasticnet'  # Use 'linear' for LinearRegression (matches original notebook)
+
+# ElasticNet hyperparameters (only used if MODEL_TYPE='elasticnet')
+ALPHA = 0.001  # Regularization strength (smaller = less regularization)
 L1_RATIO = 0.5  # ElasticNet mixing parameter (0=Ridge, 1=Lasso)
 
 # Train-test split
