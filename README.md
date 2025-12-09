@@ -32,7 +32,7 @@ A simple, interactive machine learning project that predicts house prices using 
 ---
 
 ## 🌐 Live Website
-Try predicting prices of various houses: <a href='https://steam-bell-92.github.io/House-Price-Prediction/Housing_front.html'>WEBSITE</a><br>
+Try predicting prices of various houses: <a href='https://steam-bell-92.github.io/House-Price-Prediction/WEBSITE/Housing_front.html'>WEBSITE</a><br>
 > ***Caution***: dataset from 2022-23
 
 ---
@@ -56,7 +56,8 @@ House-Price-Prediction/
 ├── Codes/
 │   ├── Housing.ipynb                🔹 ML Workflow
 │   ├── housing.py                   🔹 Python File (same as ML Workflow)
-│   └── Housing.csv                  🔹 Dataset
+│   ├── Housing.csv                  🔹 Dataset
+|   └── newplot.png                  🔹 Cell '34' Plot
 |
 ├── Images/
 │   ├── Houses_prices_pic.jpg        🔹 Background on Website
