@@ -178,20 +178,20 @@ def main():
     print_model_coefficients(model, config.FEATURE_COLUMNS)
     
     # Step 5: Evaluate on test set
-    print("Step 4: Evaluating model on test set...")
+    print("Step 5: Evaluating model on test set...")
     test_metrics = evaluate_model(model, X_test, y_test)
     
     # Step 6: Cross-validation
-    print("Step 5: Performing cross-validation...")
+    print("Step 6: Performing cross-validation...")
     cv_metrics = cross_validate_model(model, X, y)
     
     # Step 7: Fit and save scaler (optional, for future use)
-    print("Step 6: Saving scaler...")
+    print("Step 7: Saving scaler...")
     scaler = preprocessing.fit_scaler(X_train)
     preprocessing.save_scaler(scaler)
     
     # Step 8: Save model
-    print("Step 7: Saving trained model...")
+    print("Step 8: Saving trained model...")
     save_model(model)
     
     print("\n" + "="*50)

@@ -137,20 +137,24 @@ def batch_predict(input_data, model=None, return_log=False):
     if isinstance(input_data, list):
         input_data = pd.DataFrame(input_data)
     
-    # Prepare all features
-    X_list = []
-    for _, row in input_data.iterrows():
-        X = prepare_input_features(
-            row['area'],
-            row['total_rooms'],
-            row['stories'],
-            row['has_parking'],
-            row['mainroad']
-        )
-        X_list.append(X)
+    # Vectorized feature preparation
+    df = input_data.copy()
     
-    # Combine all features
-    X_all = pd.concat(X_list, ignore_index=True)
+    # Convert string inputs to integers if needed
+    if df['has_parking'].dtype == object:
+        df['has_parking'] = df['has_parking'].apply(
+            lambda x: 1 if str(x).lower() in ['yes', '1', 'true'] else 0
+        )
+    if df['mainroad'].dtype == object:
+        df['mainroad'] = df['mainroad'].apply(
+            lambda x: 1 if str(x).lower() in ['yes', '1', 'true'] else 0
+        )
+    
+    # Create log transformation for area
+    df['log_area'] = np.log(df['area'])
+    
+    # Select features in correct order
+    X_all = df[config.FEATURE_COLUMNS]
     
     # Make predictions
     log_prices = model.predict(X_all)
