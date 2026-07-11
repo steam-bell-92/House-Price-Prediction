@@ -1,9 +1,13 @@
+from pathlib import Path
+
 import pandas as pd
 import numpy as np
 import joblib
 from sklearn.model_selection import train_test_split, RepeatedKFold, cross_val_score
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import r2_score
+
+DATA_PATH = Path(__file__).resolve().parent.parent / 'data' / 'raw' / 'Housing.csv'
 
 class HousingPriceModel:
     def __init__(self, model_path='housing_model.pkl'):
@@ -139,12 +143,9 @@ if __name__ == "__main__":
     # Initialize
     house_model = HousingPriceModel()
     
-    # Load (Assuming file exists)
-    # house_model.load_data('/content/drive/MyDrive/Housing.csv') 
-    
     # For demonstration, creating dummy data if file not found
     try:
-        house_model.load_data('Housing.csv')
+        house_model.load_data(DATA_PATH)
     except:
         print("File not found, skipping execution.")
 

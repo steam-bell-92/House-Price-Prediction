@@ -2,6 +2,8 @@
 Training script for the House Price Prediction model.
 Loads data, trains ElasticNet model, evaluates performance, and saves artifacts.
 """
+from pathlib import Path
+
 import numpy as np
 import joblib
 from sklearn.model_selection import train_test_split, cross_val_score, RepeatedKFold
@@ -118,6 +120,7 @@ def save_model(model, save_path=None):
     if save_path is None:
         save_path = config.MODEL_SAVE_PATH
     
+    Path(save_path).parent.mkdir(parents=True, exist_ok=True)
     joblib.dump(model, save_path)
     print(f"Model saved to: {save_path}")
 

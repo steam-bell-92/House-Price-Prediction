@@ -25,7 +25,7 @@ python3 train.py
 ```
 
 This will:
-- Load and preprocess the data from `CODES/Housing.csv`
+- Load and preprocess the data from `data/raw/Housing.csv`
 - Remove outliers using IQR method
 - Engineer features (log transformations, etc.)
 - Train an ElasticNet model
@@ -88,9 +88,9 @@ RANDOM_STATE = 42         # For reproducibility
 
 ### File Paths
 ```python
-DATA_PATH = 'path/to/Housing.csv'
-MODEL_SAVE_PATH = 'path/to/save/model.pkl'
-SCALER_SAVE_PATH = 'path/to/save/scaler.pkl'
+DATA_PATH = 'data/raw/Housing.csv'
+MODEL_SAVE_PATH = 'models/house_price_model.pkl'
+SCALER_SAVE_PATH = 'models/scaler.pkl'
 ```
 
 ## 📊 Model Features
@@ -154,6 +154,7 @@ def predict():
 - The scaler is saved but not currently used in predictions (log transformations handle scaling)
 - The scaler is available for future enhancements if needed
 - Model artifacts are saved in `models/` directory (excluded from git)
+- Dataset lives in `data/raw/`
 - Random state is fixed for reproducibility
 
 ## 🛠️ Development

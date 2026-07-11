@@ -2,10 +2,10 @@
 Configuration file for the House Price Prediction model.
 Contains hyperparameters and file paths.
 """
-import os
+from pathlib import Path
 
 # Get the project root directory (parent of src)
-PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
 
 # ============ Hyperparameters ============
 # Model type: 'elasticnet' or 'linear'
@@ -25,15 +25,12 @@ N_REPEATS = 10
 
 # ============ File Paths ============
 # Data paths
-DATA_PATH = os.path.join(PROJECT_ROOT, 'CODES', 'Housing.csv')
+DATA_PATH = PROJECT_ROOT / 'data' / 'raw' / 'Housing.csv'
 
 # Model artifacts paths
-MODELS_DIR = os.path.join(PROJECT_ROOT, 'models')
-MODEL_SAVE_PATH = os.path.join(MODELS_DIR, 'house_price_model.pkl')
-SCALER_SAVE_PATH = os.path.join(MODELS_DIR, 'scaler.pkl')
-
-# Create models directory if it doesn't exist
-os.makedirs(MODELS_DIR, exist_ok=True)
+MODELS_DIR = PROJECT_ROOT / 'models'
+MODEL_SAVE_PATH = MODELS_DIR / 'house_price_model.pkl'
+SCALER_SAVE_PATH = MODELS_DIR / 'scaler.pkl'
 
 # ============ Feature Configuration ============
 # Features used for prediction

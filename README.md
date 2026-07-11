@@ -1,83 +1,60 @@
-# 🏠 House Price Predictor
+# House Price Prediction
 
-A simple, interactive machine learning project that predicts house prices using a multivariate linear regression model enhanced with ElasticNet regularization. The model is deployed on a static website where users can input values and receive real-time predictions based on the trained expression.
+## Overview
 
-⭐ If you find this useful, consider giving it a star!
+This project explores house price prediction using a log-transformed regression workflow. The repository includes the original exploratory notebook, a modular training/inference pipeline, and a static frontend for manual predictions.
 
----
+## Problem Statement
 
-## 📌 Project Highlights
+The goal is to estimate house prices from property attributes such as area, room count, stories, parking availability, and road access. The analysis focuses on feature engineering, outlier handling, and regression modeling.
 
-- Built using **`Python` (`scikit-learn`)** and essential data libraries
-- Performed **EDA, feature engineering**, and **`IQR-based outlier removal`**
-- Model trained using **`ElasticNet` `Regression`**
-- Validated using **10×10 `Repeated K-Fold Cross Validation`**
-- Achieved **`R² ≈ 0.57`** initially.
-- Achieved **`R² ≈ 0.54`** after cross validation (10 folds).
-- Website built with **`HTML`, `CSS`, and `JavaScript`**
-- **Static website** provides instant predictions from model equation
-  <br><br>
-⭐ If you find this useful, consider giving it a star!
+## Dataset
 
-<img src="https://github.com/steam-bell-92/House-Price-Prediction/blob/main/Model.png">
+Dataset source: placeholder. The cleaned dataset used by the project is stored at [data/raw/Housing.csv](data/raw/Housing.csv).
 
----
+## Technologies Used
 
-## 🔍 Features
+- Python
+- pandas
+- numpy
+- seaborn
+- matplotlib
+- plotly
+- scikit-learn
+- joblib
+- HTML, CSS, JavaScript
 
-| 📊 EDA | 📉 Outlier & Feature Engineering | 🧠 ElasticNet Model | 🚀 Live Prediction |
-|-------|------------------------------|-------------------|-----------------|
-| Analyzed patterns using seaborn & matplotlib | Removed outliers (IQR) & added new features | Combines Lasso & Ridge | Input → Predict in browser |
-
----
-
-## 🌐 Live Website
-Try predicting prices of various houses: <a href='https://steam-bell-92.github.io/House-Price-Prediction/WEBSITE/Housing_front.html'>WEBSITE</a><br>
-> ***Caution***: dataset from 2022-23
-
----
-
-## 🧰 Tech Stack
-
-- **`Python`** – core language for ML
-- **`pandas`**, **`numpy`** – data handling
-- **`seaborn`**, **`matplotlib`**, **`plotly`** – visualization
-- **`scikit-learn`** – model training and validation
-- **`HTML/CSS`** – frontend structure and styling of website
-- **`JavaScript`** – interactive logic for predictions
-
----
-
-## 📁 Project Structure
+## Project Structure
 
 ```
-House-Price-Prediction/
-|
-├── Codes/
-│   ├── Housing.ipynb                🔹 ML Workflow
-│   ├── housing.py                   🔹 Python File (same as ML Workflow)
-│   ├── Housing.csv                  🔹 Dataset
-|   └── newplot.png                  🔹 Cell '34' Plot
-|
-├── Images/
-│   ├── Houses_prices_pic.jpg        🔹 Background on Website
-│   └── Model.png                    🔹 Model Expression Plot
-|
-├── Website/
-│   ├── Housing.html                 🔹 Main Site where Prediction
-│   ├── Housing_front.html           🔹 Front Page of Website
-│   ├── Housing_style.css            🔹 Main Site Styling
-│   ├── Housing_front_style.css      🔹 Front Page Styling
-│   └── Housing_script.js            🔹 Logic of Prediction
-|
-├── README.md                        🔹 This File !!
-|
-└── LICENSE                          🔹 MIT License
-
+project-root/
+├── data/
+│   └── raw/
+├── notebooks/
+├── src/
+├── images/
+├── WEBSITE/
+├── README.md
+├── requirements.txt
+├── .gitignore
+└── LICENSE
 ```
----
 
-## 👤 Author
-Anuj Kulkarni - aka - steam-bell-92
+## Workflow
 
-![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+1. Load the housing dataset from `data/raw/Housing.csv`.
+2. Perform cleaning, outlier removal, and feature engineering.
+3. Train the regression model on log-transformed price features.
+4. Evaluate with a train/test split and repeated K-fold cross-validation.
+5. Save the trained model and scaler artifacts for reuse.
+
+## Results
+
+The project’s reported performance is consistent with a mid-range regression fit on the transformed target, with test and cross-validation scores shown in the notebook and training script outputs. The model coefficients and evaluation plots remain part of the analysis.
+
+## Future Improvements
+
+- Add automated data validation before training.
+- Split preprocessing and modeling into a formal pipeline object.
+- Add lightweight tests for inference and feature preparation.
+- Package the workflow for repeatable local execution.

@@ -2,6 +2,8 @@
 Data preprocessing functions for the House Price Prediction model.
 Handles data cleaning, feature engineering, and scaler management.
 """
+from pathlib import Path
+
 import pandas as pd
 import numpy as np
 import joblib
@@ -140,6 +142,7 @@ def save_scaler(scaler, save_path=None):
     if save_path is None:
         save_path = config.SCALER_SAVE_PATH
     
+    Path(save_path).parent.mkdir(parents=True, exist_ok=True)
     joblib.dump(scaler, save_path)
     print(f"Scaler saved to: {save_path}")
 
